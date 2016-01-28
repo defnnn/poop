@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#/ NAME
+#/     poop -- chef-like bash configuration management
+#/
+#/ SYNOPSIS
+#/     poop
+
+function main {
+  shome="$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"
+  source "$shome/script/profile"
+
+  local nm_recipe
+  for nm_recipe in "$@"; do
+    recipe "$nm_recipe"
+  done
+}
+
+source sub "$BASH_SOURCE" "$@"

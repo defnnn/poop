@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function recipe {
+  local nm_recipe="$1"; shift
+  set --
+  source "$nm_recipe"
+}
+
+source poop_attributes
+source poop_directory
+source poop_template
+source poop_shell
