@@ -26,7 +26,7 @@ end
 directory "tmp"
 end
 
-name="David"
 template "tmp/hello.txt"
+  name="David"
   sauce "templates/hello"
 end
