@@ -2,7 +2,7 @@
 
 function directory {
   _poop_name="$1"; shift
-  _poop_resource="directory"
+  _poop_ing="directory"
 }
 
 function do_directory {
@@ -10,7 +10,7 @@ function do_directory {
   : ${_poop_path:=${_poop_name}}
   : ${_poop_recursive:=false}
 
-  "do_${_poop_resource}_${_poop_action}"
+  "do_${_poop_ing}_${_poop_action}"
 }
 
 function do_directory_create {

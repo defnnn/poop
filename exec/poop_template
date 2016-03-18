@@ -2,14 +2,14 @@
 
 function template {
   _poop_name="$1"; shift
-  _poop_resource="template"
+  _poop_ing="template"
 }
 
 function do_template {
   : ${_poop_action:=create}
   : ${_poop_path:=${_poop_name}}
 
-  "do_${_poop_resource}_${_poop_action}"
+  "do_${_poop_ing}_${_poop_action}"
 }
 
 function do_template_create {
