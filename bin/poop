@@ -9,11 +9,9 @@
 function main {
   shome="$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"
   source "$shome/script/profile"
+  source "poop_resources"
 
-  local nm_recipe
-  for nm_recipe in "$@"; do
-    recipe "$nm_recipe"
-  done
+  recipe "$@"
 }
 
 source sub "$BASH_SOURCE" "$@"
