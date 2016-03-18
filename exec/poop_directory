@@ -29,7 +29,7 @@ function do_directory_create {
 
 function do_directory_delete {
   if [[ "$_poop_recursive" = false ]]; then
-    rmdir -v  "${_poop_path}"
+    rm -vd  "${_poop_path}"
   else
     rm -vrf "${_poop_path}"
   fi
