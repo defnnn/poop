@@ -3,4 +3,5 @@
 source poop_common
 source poop_attributes
 source poop_directory
+source poop_file
 source poop_template
