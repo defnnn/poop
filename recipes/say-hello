@@ -30,3 +30,13 @@ template "tmp/hello.txt"
   name="David"
   sauce "templates/hello"
 end
+
+cat "tmp/hello.txt"
+
+file "tmp/hello.txt"
+  action delete
+end
+
+directory "tmp"
+  action delete
+end

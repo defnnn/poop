@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function template {
   _poop_name="$1"; shift
-  _poop_ing="template"
+  _poop_ing="$FUNCNAME"
 }
 
 function do_template {
@@ -13,7 +13,6 @@ function do_template {
 }
 
 function do_template_create {
-  local _dollar='$'
   local pth_source="${_poop_sauce}"
 
   local tmp_template="$(mktemp -t XXXXXXXXX)"

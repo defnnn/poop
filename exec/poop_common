@@ -1,4 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+function recipe {
+  local nm_recipe="$1"; shift
+  set --
+  source "$nm_recipe"
+}
 
 function install_options {
   if [[ -n "$_poop_mode" ]]; then
