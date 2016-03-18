@@ -9,7 +9,7 @@ function do_template {
   : ${_poop_action:=create}
   : ${_poop_path:=${_poop_name}}
 
-  eval "do_${_poop_resource}_${_poop_action}"
+  "do_${_poop_resource}_${_poop_action}"
 }
 
 function do_template_create {
@@ -17,12 +17,7 @@ function do_template_create {
   local pth_source="${_poop_sauce}"
 
   local tmp_template="$(mktemp -t XXXXXXXXX)"
-  eval "cat > $tmp_template <<EOF
-$(cat "${pth_source}" | perl -pe 's{\$\{(\w+)\}}{!!!/$1/!!!}g; 
-                      s{\$}{\${_dollar}}g; 
-                      s{!!!/(\w+)/!!!}{\${$1}}g;')
-EOF"
-
+  cat "${pth_source}" | envsubst > "$tmp_template"
   install -v $(install_options)"$tmp_template" "${_poop_path}"
   rm -f "$tmp_template"
 }

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function attr_accessor {
   local attr="$1"; shift
   local attrdef="${1:-}"
@@ -14,7 +16,7 @@ function do_ {
 }
 
 function end {
-  eval "do_${_poop_resource}"
+  "do_${_poop_resource}"
   eval "${_last_end}"
 
   _poop_ignore_failure=false

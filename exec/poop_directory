@@ -10,7 +10,7 @@ function do_directory {
   : ${_poop_path:=${_poop_name}}
   : ${_poop_recursive:=false}
 
-  eval "do_${_poop_resource}_${_poop_action}"
+  "do_${_poop_resource}_${_poop_action}"
 }
 
 function do_directory_create {
