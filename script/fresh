@@ -4,6 +4,8 @@ function poop_fresh {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
+  return 0
+
   if [[ -x "$(which toilet 2>/dev/null || true)" ]]; then
     return 0
   fi
