@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+function poop_fresh {
+  local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
+  source "$shome/script/profile"
+
+  if [[ -x "$(which toilet 2>/dev/null || true)" ]]; then
+    return 0
+  fi
+
+  return 1
+}
+
+poop_fresh "$@"
