@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function poop_fresh {
-  local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
+  local shome="${_poop_home:-"$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"}"
   source "$shome/script/profile"
 
   return 0
