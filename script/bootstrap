@@ -5,6 +5,7 @@ function poop_bootstrap {
   source "$shome/script/profile"
 
   pkg ensure misc/toilet
+  pkg ensure devel/gettext-tools
 }
 
 poop_bootstrap "$@"
