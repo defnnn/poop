@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-function profile {
+function _poop_profile {
   local shome="${_poop_home:-"$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"}"
   PATH="$shome/bin:$shome/exec:$shome/recipes:$PATH"
 }
 
-profile
+_poop_profile
